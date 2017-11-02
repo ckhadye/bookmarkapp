@@ -2,9 +2,12 @@ package com.ck.services.rest;
 
 import java.util.List;
 
+import org.springframework.stereotype.Service;
+
 import com.ck.dto.Bookmark;
 import com.ck.dto.User;
 
+@Service(value="bookmarkService")
 public interface BookmarkService {
 	public void saveBookmark(Bookmark bookMark);
 	public Bookmark getById(Long id);

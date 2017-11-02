@@ -10,7 +10,6 @@ public class Bookmark {
 	private Date date;
 	private List<String> tags;
 	
-	
 	public String getUrl() {
 		return url;
 	}
