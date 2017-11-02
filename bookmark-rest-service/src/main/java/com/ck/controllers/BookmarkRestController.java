@@ -13,6 +13,7 @@ public class BookmarkRestController {
 	
 	@RequestMapping("/hello")
 	public String sayHello(@RequestParam String name){
+	System.out.println("test for git conflict");
 	return "helloWorld "+name;	
 	}
 	
