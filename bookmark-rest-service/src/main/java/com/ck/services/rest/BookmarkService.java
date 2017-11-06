@@ -7,7 +7,7 @@ import org.springframework.stereotype.Service;
 import com.ck.dto.Bookmark;
 import com.ck.dto.User;
 
-@Service(value="bookmarkService")
+@Service
 public interface BookmarkService {
 	public void saveBookmark(Bookmark bookMark);
 	public Bookmark getById(Long id);

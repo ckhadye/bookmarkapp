@@ -9,6 +9,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -40,6 +41,12 @@ public class BookmarkRestController {
 		bookMark.setUrl("test.com");
 		bookMark.setTags(Arrays.asList("tag1","tag2","tag3"));
 		return bookMark;	
+	}
+	
+	@RequestMapping(path="/bookmark/save",method=RequestMethod.POST,consumes="application/json;charset=UTF-8")
+	public void saveBookmark(@RequestBody Bookmark bookMark){
+		System.out.println("Inside method");
+		System.out.println(bookMark);
 	}
 	
 }

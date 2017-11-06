@@ -1,14 +1,15 @@
 package com.ck.dto;
 
+import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
 public class Bookmark {
 
 	private long id;
-	private String url;
-	private Date date;
-	private List<String> tags;
+	private String url = "";
+	private Date date = new Date();
+	private List<String> tags = new ArrayList<String>();
 	
 	public String getUrl() {
 		return url;
@@ -35,4 +36,12 @@ public class Bookmark {
 		this.id = id;
 	}
 	
+	
+	@Override
+	public String toString() {
+		// TODO Auto-generated method stub
+		StringBuilder builder = new StringBuilder();
+		builder.append("id:").append(id).append(",url:").append(url).append(",date:").append(date).append(",tags:").append(tags.toString());
+		return builder.toString();
+	}
 }
